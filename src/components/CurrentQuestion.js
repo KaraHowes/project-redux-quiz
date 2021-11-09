@@ -37,7 +37,11 @@ export const CurrentQuestion = () => {
       )}
 
        <div>
-        {answers[0] && <p>This is the correct answer!</p>}
+        {answers[currentQuestionIndex]  
+          ? answers[currentQuestionIndex].isCorrect 
+            ? <p>It's Correct</p>
+            : <p>Not correct</p>
+          :<p>Waiting for the answer</p>}
         </div>
 
       
